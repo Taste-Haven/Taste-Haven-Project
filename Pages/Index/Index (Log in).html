@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Sign Up</title>
+
+        <link rel="stylesheet" href="Index (Log in).css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tac+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/flq2hcw.css">
+
+        <!-- Firebase -->
+        <script>
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "firebase/app";
+            import { getAnalytics } from "firebase/analytics";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyBXn8yxoWTBH7WQYz0-3_GoMINEiaExwy4",
+                authDomain: "taste-haven7.firebaseapp.com",
+                projectId: "taste-haven7",
+                storageBucket: "taste-haven7.appspot.com",
+                messagingSenderId: "249353155936",
+                appId: "1:249353155936:web:158a1fd72869fa25d39a05",
+                measurementId: "G-6GWEEVGC2J"
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig); 
+            const analytics = getAnalytics(app);
+        </script>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <div id="header-and-details">
+            <h1>Log In</h1>
+
+            <form id="login-form">
+                <input type="email" id="email" name="email" placeholder="Email"><br>
+                <input type="password" id="password" name="password" placeholder="Password"><br>
+                <button type="submit">Log in/button>
+            </form>
+
+            <div>
+                <p>Not already a user? <a href="Sign up/Sign-up.html">Sign Up</a></p>
+            </div>
+        </div>
+
+        <script src="Index (Log in).js"></script>
+        <script src="../../Resources/JavaScript/Burger Menu + Dark Mode.js"></script>
+</html>

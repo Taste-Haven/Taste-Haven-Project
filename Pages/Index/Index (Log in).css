@@ -1,0 +1,38 @@
+/* -------------Variables------------- */
+:root {
+  --White: rgb(255, 255, 255);
+  --Light-Grey-1: rgb(248, 245, 245);
+  --Light-Grey-2: rgb(222, 222, 222);
+  --Dark-Grey: rgb(57, 57, 57);
+  --Light-Black: rgb(29, 29, 29);
+  --Black: rgb(0, 0, 0);
+
+  --Light-Red: rgb(226, 70, 70);
+  --Light-Orange: rgb(255, 194, 97);
+  --Light-Purple: rgb(138, 92, 253);
+  --Light-Blue: rgb(108, 196, 254);
+}
+
+body {
+  margin: auto 70px;
+}
+
+#header-and-details {
+  display: grid;
+  grid-template-columns: repeat(1, 1);
+}
+
+#header-and-details h1 {
+  font-family: "Tac One";
+  font-size: 70px;
+  align-items: center;
+}
+
+#login-form {
+  background-color: var(--Light-Grey-2);
+}
+
+.error {
+  color: var(--Light-Red);
+  font-size: 0.8em;
+}
