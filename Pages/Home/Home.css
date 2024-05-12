@@ -1,0 +1,201 @@
+/* -------------Variables------------- */
+:root {
+    --White: rgb(255, 255, 255);
+    --Light-Grey-1: rgb(248, 245, 245);
+    --Light-Grey-2: rgb(222, 222, 222);
+    --Dark-Grey: rgb(57, 57, 57);
+    --Light-Black: rgb(29, 29, 29);
+    --Black: rgb(0, 0, 0);
+
+    --Light-Red: rgb(226, 70, 70);
+    --Light-Orange: rgb(255, 194, 97);
+    --Light-Purple: rgb(138, 92, 253);
+    --Light-Blue: rgb(108, 196, 254);
+}
+
+
+/* -------------Body------------- */
+body {
+    background-color: var(--Light-Grey-1);
+    font-family: sans-serif;
+    margin: 60px 30px;
+    padding-top: 0px;
+}
+
+/* Dark Mode */
+.dark-mode { 
+    background-color: var(--Light-Black);
+    color: var(--White);
+    font-family: sans-serif;
+    margin: 60px 30px;
+    padding-top: 0px;
+}
+
+.dark-mode body {
+    margin-top: 50px;
+}
+
+.dark-mode .introduction-container, .dark-mode .conclusion-container {
+    color: var(--Black);
+}
+
+/* -------------Nav Bar------------- */
+#nav-bar-container {
+margin: 0;
+font-family: 'Tac One';
+}
+
+#nav-bar {
+    background-color: var(--Light-Red);
+    color: var(--Black);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+  
+#Nav-bar-logo {
+    font-size: xxx-large;
+}
+
+.logo {
+    font-size: 24px;
+    margin: 0px 0px;
+}
+  
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+.nav ul {
+    font-size: x-large;
+    list-style-type: none;
+    margin: 0 50px;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--Black);
+}
+/* Mode Toggle Button */
+.mode-toggle button {
+    background-color: var(--Light-Black);
+    color: var(--White);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--Black);
+    margin: 3px 0;
+}
+  
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+/* Smaller Screens */
+@media screen and (max-width: 768px) {
+    #Nav-bar-logo {
+        margin-left: 10px;
+    }
+
+    #nav-bar {
+        padding: 10px;
+    }
+    
+    .nav {
+        flex-direction: column;
+        background-color: var(--Light-Red);
+        padding: 20px;
+        position: absolute;
+        top: 70px;
+        left: -1000%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        transition: all 0.3s ease;
+        align-content: left;
+        justify-content: left;
+    }
+  
+    .nav.nav-active {
+        left: 0;
+    }
+  
+    .nav ul {
+        justify-content: flex-start;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .nav ul li {
+        margin: 10px 0px;
+        padding-left: 10px 0;
+        width: 100%;
+    }
+  
+    .burger {
+        display: flex;
+    }
+  
+    .overlay {
+        display: block;
+    }
+}
+
+/* Line Breaks */
+.hr-1 {
+    border-style: solid;
+    opacity: 60%;
+    margin: 50px 25px;
+}
+
+.hr-2 {
+    border-style: solid;
+    opacity: 0%;
+    margin: 50px 25px;
+}
+
+.transparent-hr-1 {
+    opacity: 0%;
+}
+
+.transparent-hr-2 {
+    height: 30px;
+    opacity: 0%;
+}
