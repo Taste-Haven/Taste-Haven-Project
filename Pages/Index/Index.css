@@ -1,20 +1,14 @@
-/* -------------Variables------------- */
-:root {
-  --White: rgb(255, 255, 255);
-  --Light-Grey-1: rgb(248, 245, 245);
-  --Light-Grey-2: rgb(222, 222, 222);
-  --Dark-Grey: rgb(57, 57, 57);
-  --Light-Black: rgb(29, 29, 29);
-  --Black: rgb(0, 0, 0);
-
-  --Light-Red: rgb(226, 70, 70);
-  --Light-Orange: rgb(255, 194, 97);
-  --Light-Purple: rgb(138, 92, 253);
-  --Light-Blue: rgb(108, 196, 254);
-}
+@import url(../../../Resources/Variables.css);
 
 body {
+  background-color: var(--Light-Red);
   margin: auto 70px;
+}
+
+#Logo {
+  max-width: 200px;
+  margin: 4rem auto;
+  border-radius: 50%;
 }
 
 #header-and-details {
@@ -22,14 +16,75 @@ body {
   grid-template-columns: repeat(1, 1);
 }
 
-#header-and-details h1 {
-  font-family: "Tac One";
-  font-size: 70px;
-  align-items: center;
+#header-and-details form {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
+  max-width: 55ch;
 }
 
-#login-form {
-  background-color: var(--Light-Grey-2);
+#email {
+  border-style: none;
+  background-color: var(--Black);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+#password {
+  border-style: none;
+  background-color: var(--Black);
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: var(--Light-Red);
+}
+
+#header-and-details form button {
+  background-color: var(--Black);
+  border-style: none;
+  color: var(--Light-Red);
+  font-size: 1.25rem;
+  font-family: "Tac One";
+  height: 2rem;
+  border-radius: 5px;
+}
+
+#header-and-details div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto auto;
+}
+
+#header-and-details div p {
+  margin: auto auto;
+  margin-top: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#header-and-details div p a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--Black);
+  padding: 0.3rem;
+  border-radius: 5px;
+  color: var(--Light-Grey-1);
+  margin-left: 1ch;
+  font-weight: 1;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  color: var(--White);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }
 
 .error {
