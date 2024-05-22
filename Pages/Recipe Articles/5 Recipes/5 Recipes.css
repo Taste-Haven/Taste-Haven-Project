@@ -4,40 +4,47 @@
   width: 0px;
 }
 
-/* *-------------Body------------- */
+/* *-------------Body---------------------------------------------------------------------- */
 body {
   background-color: var(--Light-Grey-1);
-  font-family: sans-serif;
+  font-family: "Noto sans", sans-serif;
   margin: 60px 30px;
   padding-top: 0px;
 }
 
-/* *-------------Nav Bar------------- */
-#Nav-bar-container {
+/* *-------------Top Bar------------------------------------------------------------------- */
+#Top-bar-container {
   margin: 0;
-  font-family: "Tac One";
+  font-family: "Noto sans";
 }
 
-#Nav-bar {
-  background-color: var(--Color-2);
+#Top-bar {
+  background-color: var(--Light-Grey-2);
   color: var(--Black);
   padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  height: fit-content;
+  height: max-content;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
   transition: all 0.3s ease;
 }
 
-#Nav-bar-logo {
-  max-width: 55px;
-  fill: var(--Black);
-  margin: 0px 0px;
+.logo-container {
+  margin-left: 15px;
+  padding: 0px;
+  height: max-content;
+}
+
+.logo a {
+  text-decoration: none;
+  font-family: "Freeman", "Noto sans", sans-serif;
+  font-size: 2rem;
+  color: var(--Color-1);
 }
 
 .nav {
@@ -48,7 +55,7 @@ body {
 }
 
 .nav ul {
-  font-size: x-large;
+  font-size: 1rem;
   list-style-type: none;
   margin: 0 50px;
   padding: 0;
@@ -62,15 +69,16 @@ body {
 .nav ul li a {
   text-decoration: none;
   color: var(--Black);
+  font-weight: bold;
 }
 
 .nav ul li a:hover {
   color: var(--Color-4);
 }
 
-/* Dark Mode Toggle Button */
+/** Dark Mode Toggle Button---------------------------------- */
 .mode-toggle button {
-  background-color: var(--Color-2);
+  background-color: var(--Light-Grey-2);
   color: var(--Light-Black);
   border: none;
 
@@ -87,22 +95,24 @@ body {
 }
 
 .dark-mode #Dark-mode-toggle {
-  color: var(--Black);
+  /*In dark mode*/
+  color: var(--White);
+  background-color: var(--Dark-Grey-2);
 }
 
 .mode-toggle button:hover {
-  background-color: var(--Light-Black);
-  color: var(--White);
+  /*Light mode hover*/
+  color: var(--Color-1);
 }
 
 .dark-mode .mode-toggle button:hover {
-  background-color: var(--White);
-  color: var(--Black);
+  /*Dark mode hover*/
+  color: var(--Color-4);
 }
 
-/* Settings button */
+/** Settings button */
 .settings-button button {
-  background-color: var(--Color-2);
+  background-color: var(--Light-Grey-2);
   color: var(--Light-Black);
   border: none;
 
@@ -110,7 +120,8 @@ body {
   width: 30px;
   height: 30px;
 
-  padding: 6px 5px;
+  padding: 4.85px 5px;
+  /* padding-bottom: 10px; */
 
   border-radius: 50%;
   cursor: pointer;
@@ -121,17 +132,20 @@ body {
 }
 
 .dark-mode #Settings-button {
-  color: var(--Black);
-}
-
-.settings-button button:hover {
-  background-color: var(--Light-Black);
+  /*Dark mode*/
+  background-color: var(--Dark-Grey-2);
   color: var(--White);
 }
 
+.settings-button button:hover {
+  /*Light mode hover*/
+  color: var(--Color-1);
+}
+
 .dark-mode .settings-button button:hover {
-  background-color: var(--White);
-  color: var(--Black);
+  /*Dark mode hover*/
+  /* background-color: var(--Color-2); */
+  color: var(--Color-1);
 }
 
 .burger {
@@ -144,13 +158,13 @@ body {
 .line {
   width: 25px;
   height: 3px;
-  background-color: var(--Black);
+  background-color: var(--Color-1);
   margin: 3px 0;
 }
 
 .overlay {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -158,6 +172,27 @@ body {
   z-index: 999;
 }
 
+/** Bottom Bar--------------------------------------------------------------------------------- */
+.Bottom-bar-container {
+  margin: 0px;
+}
+
+.Bottom-bar {
+  background-color: var(--Color-1);
+  color: var(--Black);
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  /* height: max-content; */
+  height: 50px;
+  top: 1;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
 /* *-------------Article------------- */
 
 #Article {
@@ -172,6 +207,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  max-width: 600px;
 }
 
 #User-published {
@@ -188,8 +224,7 @@ body {
 .save-collection-button {
   max-width: fit-content;
 
-  font-family: "Tac One";
-  font-size: x-large;
+  font-family: "Noto sans";
 
   background-color: var(--Color-1);
   height: fit-content;
@@ -200,6 +235,7 @@ body {
 .save-collection-button a {
   color: var(--Color-4);
   text-decoration: none;
+  font-size: 1rem;
 }
 
 #Article-header {
@@ -211,19 +247,20 @@ body {
 #Article-header h3 {
   margin: 0px 0px;
   font-size: 1rem;
-  color: var(--Color-1);
   margin-top: 2rem;
   margin-bottom: 1rem;
+  opacity: 90%;
 }
 
 #Introduction {
-  background-color: var(--Color-3);
-  padding: 1em;
   border-radius: 10px;
+  max-width: 100%;
+  max-width: max-content;
+  font-size: 0.9rem;
+  opacity: 80%;
 }
 
 .introduction-container {
-  text-align: justify;
   display: block;
   max-width: 60ch;
   margin: auto;
@@ -245,6 +282,7 @@ body {
 }
 
 .transparent-hr-1 {
+  height: 1rem;
   opacity: 0%;
 }
 
@@ -299,7 +337,7 @@ body {
 }
 
 .recipe-info h2 b {
-  color: var(--Color-3);
+  color: var(--Color-1);
 }
 
 .recipe-info h2,
@@ -315,8 +353,8 @@ body {
   right: 0;
   max-width: fit-content;
 
-  font-family: "Tac One";
-  font-size: x-large;
+  font-family: "Noto sans";
+  font-size: 1rem;
 
   background-color: var(--Color-1);
   height: fit-content;
@@ -343,7 +381,7 @@ body {
 }
 
 .full-ingredients-button {
-  font-family: "Tac One";
+  font-family: "Noto sans";
   font-size: 1.5rem;
 
   background-color: var(--Black);
@@ -369,11 +407,9 @@ body {
 }
 
 #Conclusion {
-  background-color: var(--Color-3);
-  border-color: var(--Color-3);
-  border-style: solid;
+  background-color: var(--Color-4);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1em;
 }
 
 .conclusion-container {
@@ -389,10 +425,41 @@ body {
   border-radius: 0.25rem;
 }
 
+/* Base styles for the bottom navigation bar */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--Light-Grey-2);
+  z-index: 1000;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: var(--Black);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.bottom-nav-item i {
+  font-size: 20px; /* Icon size */
+}
+
+.bottom-nav-item:hover {
+  background-color: #444; /* Hover effect */
+}
+
 /** Screens--------------------------------------------------- */
 @media screen and (max-width: 788px) {
   /** Nav Bar Smaller Screen */
-  #nav-bar {
+  #Top-bar {
     padding: 10px;
   }
 
@@ -425,12 +492,16 @@ body {
     width: 100%;
   }
 
-  .burger {
+  /* .burger {
     display: flex;
-  }
+  } */
 
   .overlay {
     display: block;
+  }
+
+  .bottom-nav {
+    display: flex; /* Display the nav bar on small screens */
   }
 }
 
@@ -462,18 +533,6 @@ body {
 
 @media screen and (min-width: 1700px) {
   /** Desktop Screen */
-  #Article {
-    max-width: none;
-  }
-
-  #Article-body {
-    display: grid;
-    grid-template-columns: repeat(2, 1);
-  }
-
-  .recipe-grid-container {
-    max-width: 800px;
-  }
 }
 
 /** Dark Mode-------------------------------------------------------- */
@@ -487,29 +546,37 @@ body {
   margin-top: 50px;
 }
 
-.dark-mode nav {
-  color: var(--White);
+.dark-mode #Top-bar {
+  background-color: var(--Dark-Grey-2);
+}
+
+.dark-mode .logo a {
+  color: var(--Light-Grey-1);
+}
+
+.dark-mode nav ul li a {
+  color: var(--Light-Grey-1);
 }
 
 .dark-mode .introduction-container,
 .dark-mode .conclusion-container {
-  color: var(--Black);
+  color: var(--White);
 }
 
 .dark-mode #User-icon {
   fill: var(--Color-3);
 }
 
-.dark-mode #Article-header h3 {
-  color: var(--Color-3);
-}
-
 .dark-mode .recipe-grid-container {
-  background-color: var(--Dark-Grey);
+  background-color: var(--Dark-Grey-1);
 }
 
 .dark-mode .recipe-info {
   color: var(--White);
+}
+
+.dark-mode .recipe-info h2 b {
+  color: var(--Color-3);
 }
 
 .dark-mode .save-button {
@@ -517,5 +584,5 @@ body {
 }
 
 .dark-mode .save-button a {
-  color: var(--Dark-Grey);
+  color: var(--Dark-Grey-1);
 }

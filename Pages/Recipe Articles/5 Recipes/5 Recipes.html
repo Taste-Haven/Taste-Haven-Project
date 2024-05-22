@@ -10,18 +10,20 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tac+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="https://use.typekit.net/flq2hcw.css">
     </head>
 
     <!-- Body -->
     <body>
-        <div id="Nav-bar-container"> <!--* NAV BAR-------------------------------->
-            <header id="Nav-bar">
+        <div id="Nav-bar-container"> <!--* TOP BAR-------------------------------->
+            <header id="Top-bar">
 
-                <svg id="Nav-bar-logo" class="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 2353.67">
-                    <path d="M1468.05,525.05c-60.5,204.65-257.99,342.71-463.45,378.98-24.65,390.42-20.3,1295.26-497.2,1425.41-177.4,48.41-369.69-30.31-420.62-216.92-60.36-221.17,82.87-431.07,295.24-496.46-30.36,42.94-40.2,97.61-26.37,148.3,18.86,69.12,84.22,90.89,148.72,73.28,267.25-72.94,357-696.49,416.86-930.67-108.7,9.86-218.88,5.27-327.79,5.29-24.68,199.82-109.67,477.99-330.84,538.35-110.59,30.18-221.6-13.79-253.67-131.28-73.56-269.55,325.18-559.09,547.4-624.68,0-54.46,14.43-110.38,47.1-153.96,6.71,42.73,8.81,86.71,8.61,131.33,214.26-58.47,438.81,11.44,653.07-47.03,76.03-20.75,142.84-66.21,190.16-128.64l10.68,11.94,2.1,16.76ZM350.9,948.76c-99.07,27.04-276.25,112.52-240.41,243.84,16.98,62.2,86.31,80.41,143.91,64.7,156.66-42.76,239.16-193.99,270.76-341.25-58.44,3.57-116.66,16.99-174.26,32.71Z"/><path d="M2579.69,1169.77c17.61,64.51,66.21,142.84,142.24,122.09,69.12-18.86,107.01-115.85,121.87-179.31,45.49,202.95-18.75,584.38-253.74,648.51-126.71,34.58-215.96-74.74-245.51-183.02-52.82-193.53-26.46-396.28,9.32-591.71-42.93,24.09-90.06,41.91-138.44,55.11-23.04,6.29-49.01,10.9-72.05,17.19-86.66,335.56-168.46,870.31-562.42,977.82-179.7,49.04-365.08-31.56-416.01-218.18-57.85-211.96,93.76-409.29,293.57-466.29-20.1,35.19-21.56,75.2-11.5,112.06,19.49,71.42,80.86,96.75,147.68,78.52,161.27-44.01,290.25-297.05,344.47-443.05-26.6,2.31-52.57,6.92-77.91,13.84-73.72,20.12-146.4,62.23-180.74,135.97-13.2-21.15-26.4-42.3-32.69-65.34-37.1-135.93,82.7-223.08,177.15-248.86,46.08-12.58,135.72-19.71,182.64-20.14,70.34-204.86,141.1-417.26,271.14-593.85l-3.56-3.98c-132.77,130.3-259.04,320.72-445.65,371.65-126.71,34.58-269.14,11.57-307.5-128.97-22.64-82.94,6.67-175.1,64.47-235.44,41.71,134.67,163.19,153.5,289.9,118.92,188.92-51.56,416.98-222.72,560.02-306.32l26.18,5.23c-169.62,222.05-246.44,502.94-293.94,773.35,52.78,2.92,105.35-4,156.04-17.83,18.43-5.03,36.23-12.36,53.41-22,53.37-239.83,247.86-788.01,508.19-859.06,55.29-15.09,89.02,17.79,102.22,66.17,73.56,269.55-224,657.72-431.75,803.54-6.06,95.72-2.27,191.23,22.88,283.39ZM2766.78,195.36c-99.07,27.04-203.08,498.53-219.4,602.01,131.73-70.61,288.55-430.27,248.94-575.41-3.77-13.82-11.11-31.63-29.54-26.6Z"/>
-                </svg>
+                <div class="logo-container">
+                    <div class="logo"><a href="#">taste haven</a></div>
+                </div>
 
                 <nav class="nav">
                     <ul>
@@ -34,7 +36,7 @@
                         <div class="mode-toggle">
                             <button id="Dark-mode-toggle" onclick="toggleMode()">
                             
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16">
                                     <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
                                 </svg>
                             
@@ -44,7 +46,7 @@
                         <div class="settings-button">
                             <button id="Settings-button" onclick="">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
                                     <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
                                   </svg>
 
@@ -56,17 +58,27 @@
                 </nav>
 
                 <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
                 </div>
             </header>
         </div>
         
         <div class="overlay"></div>
 
+        <!-- <div class="Bottom-bar-container">
+            <div class="Bottom-bar">
+                <div class="Home">
+                    
+                </div>
+            </div>
+        </div> -->
+
         <div id="Article"> <!--* ARTICLE------------------------------------------>
             <article>
+                
+
                 <header id="Article-header">
 
                     <hr class="transparent-hr-2">
@@ -97,321 +109,326 @@
                     <section id="Introduction"> <!-- Introduction -->
                         <div class="introduction-container">
                             <p style="margin-top: 0px; margin-bottom: 0px;">
-                                When friends are coming over, one of the best ways to elevate the gathering is by serving delicious snacks that everyone will love. Whether you're hosting a movie night, a game day get-together, or simply catching up with friends, having a selection of tasty snacks is a must. To help you impress your guests, we've curated a list of five mouthwatering snack recipes that are easy to make and guaranteed to be a hit at any gathering. From cheesy loaded nachos to flavorful stuffed mushrooms, these recipes offer a perfect balance of flavors and textures to satisfy any craving. Let's dive into these delightful recipes that will take your entertaining game to the next level!
+                                When friends are coming over, one of the best ways to elevate the gathering is by serving delicious snacks that everyone will love. Whether you're hosting a movie night, a game day get-together, or simply catching up with friends, having a selection of tasty snacks is a must. 
+                                
+                                <hr class="transparent-hr-1">
+                                To help you impress your guests, we've curated a list of five mouthwatering snack recipes that are easy to make and guaranteed to be a hit at any gathering. From cheesy loaded nachos to flavorful stuffed mushrooms, these recipes offer a perfect balance of flavors and textures to satisfy any craving. Let's dive into these delightful recipes that will take your entertaining game to the next level!
                             </p>
                         </div>
                     </section>
                     
                     <hr class="hr-1">
 
-                    <!--* 1. LOADED NACHOS -->
-                    <section id="Loaded-nachos" class="recipes">
-                        <div class="recipe-grid-container">
-                            <div class="recipe-grid-item">
-                                <div class="recipe-info">
-                                    <div class="grid-contents">
-                                        <h2><b>1.</b> Loaded Nachos</h2>
+                    <section id="Recipe-list">
+                        <!--* 1. LOADED NACHOS -->
+                        <section id="Loaded-nachos" class="recipes">
+                            <div class="recipe-grid-container">
+                                <div class="recipe-grid-item">
+                                    <div class="recipe-info">
+                                        <div class="grid-contents">
+                                            <h2><b>1.</b> Loaded Nachos</h2>
 
-                                        <p>
-                                            Dive into a mountain of crispy tortilla chips topped with melted cheese, seasoned ground beef or shredded chicken, fresh tomatoes, jalapeños, and olives, all served with creamy guacamole and sour cream on the side.
-                                        </p>
-                                        
-                                        <button class="save-button"><a href="#">Save</a></button>
+                                            <p>
+                                                Dive into a mountain of crispy tortilla chips topped with melted cheese, seasoned ground beef or shredded chicken, fresh tomatoes, jalapeños, and olives, all served with creamy guacamole and sour cream on the side.
+                                            </p>
+                                            
+                                            <button class="save-button"><a href="#">Save</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="recipe-grid-item">
+                                    <img class="images" src="../../../Resources/Images/baked-ground-beef-nachos.png" alt="Loaded Nachos" style="margin-top: 0px;">
+                                </div>
+
+                                <div class="recipe-grid-item">
+                                    <div class="ingredients">
+                                        <div class="grid-contents">
+                                            <h3>Ingredients:</h3>
+                                            <p>
+                                                <ul>
+                                                    <li>1 bag tortilla chips</li>
+                                                    <li>2 cups shredded cheese (cheddar or Mexican blend)</li>
+                                                    <li>1 pound ground beef or shredded chicken, cooked and seasoned with taco seasoning</li>
+                                                    <li>1 cup diced tomatoes</li>
+                                                    <li>1/2 cup sliced jalapeños (fresh or pickled)</li>
+                                                    <li>1/2 cup sliced black olives</li>
+                                                    <li>1/2 cup Sour cream</li>
+                                                    <li>1/2 cup guacamole</li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipe-grid-item">
+                                    <div class="method">
+                                        <div class="grid-contents">
+                                            <h3>Method:</h3>
+                                            <p>
+                                                <ol>
+                                                    <li>Preheat oven to 350°F (175°C).</li>
+                                                    <li>Spread out tortilla chips on a baking sheet.</li>
+                                                    <li>Sprinkle shredded cheese evenly over the chips.</li>
+                                                    <li>Add cooked meat, tomatoes, jalapeños, and olives on top.</li>
+                                                    <li>Bake for about 10 minutes, or until the cheese is melted and bubbly.</li>
+                                                    <li>Serve with sour cream and guacamole on the side.</li>
+                                                </ol>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </section>
 
-                            
-                            <div class="recipe-grid-item">
-                                <img class="images" src="../../../Resources/Images/baked-ground-beef-nachos.png" alt="Loaded Nachos" style="margin-top: 0px;">
-                            </div>
+                        <hr class="transparent-hr-2">
 
-                            <div class="recipe-grid-item">
-                                <div class="ingredients">
-                                    <div class="grid-contents">
-                                        <h3>Ingredients:</h3>
-                                        <p>
-                                            <ul>
-                                                <li>1 bag tortilla chips</li>
-                                                <li>2 cups shredded cheese (cheddar or Mexican blend)</li>
-                                                <li>1 pound ground beef or shredded chicken, cooked and seasoned with taco seasoning</li>
-                                                <li>1 cup diced tomatoes</li>
-                                                <li>1/2 cup sliced jalapeños (fresh or pickled)</li>
-                                                <li>1/2 cup sliced black olives</li>
-                                                <li>1/2 cup Sour cream</li>
-                                                <li>1/2 cup guacamole</li>
-                                            </ul>
-                                        </p>
+                        <!--* 2. STUFFED MUSHROOMS -->
+                        <section id="Stuffed-mushrooms" class="recipes">
+                            <div class="recipe-grid-container">
+                                <div class="recipe-grid-item">
+                                    <div class="recipe-info">
+                                        <div class="grid-contents">
+                                            <h2><b>2.</b> Stuffed Mushrooms</h2>
+                                                    
+                                            <p>
+                                                Indulge in these elegant stuffed mushrooms filled with a creamy mixture of cream cheese, garlic, parsley, and Parmesan cheese, baked to perfection until golden brown and irresistibly delicious.
+                                            </p>
+                                            
+                                            <button class="save-button"><a href="#">Save</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipe-grid-item">
+                                    <img class="images" src="../../../Resources/Images/stuffed-mushroom.png" style="margin-top: 0px;">
+                                </div>
+
+                                <div class="recipe-grid-item">
+                                    <div class="ingredients">
+                                        <div class="grid-contents">
+                                            <h3>Ingredients:</h3>
+                                            <p>
+                                                <ul>
+                                                    <li>16 large mushrooms (cremini or button)</li>
+                                                    <li>220g Cream cheese</li>
+                                                    <li>2 cloves garlic, minced</li>
+                                                    <li>2 tablespoons chopped fresh parsley</li>
+                                                    <li>1/4 cup grated Parmesan cheese</li>
+                                                    <li>Salt and pepper to taste</li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipe-grid-item">
+                                    <div class="method">
+                                        <div class="grid-contents">
+                                            <h3>Method:</h3>
+                                            <p>
+                                                <ol>
+                                                    <li>Preheat oven to 375°F (190°C).</li>
+                                                    <li>Remove stems from mushrooms and set aside.</li>
+                                                    <li>In a bowl, mix cream cheese, minced garlic, parsley, Parmesan cheese, salt, and pepper.</li>
+                                                    <li>Fill each mushroom cap with the cream cheese mixture.</li>
+                                                    <li>Place stuffed mushrooms on a baking sheet.</li>
+                                                    <li>Bake for 15-20 minutes, or until mushrooms are tender and filling is golden brown.</li>
+                                                    <li>Serve Hot.</li>
+                                                </ol>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="recipe-grid-item">
-                                <div class="method">
-                                    <div class="grid-contents">
-                                        <h3>Method:</h3>
-                                        <p>
-                                            <ol>
-                                                <li>Preheat oven to 350°F (175°C).</li>
-                                                <li>Spread out tortilla chips on a baking sheet.</li>
-                                                <li>Sprinkle shredded cheese evenly over the chips.</li>
-                                                <li>Add cooked meat, tomatoes, jalapeños, and olives on top.</li>
-                                                <li>Bake for about 10 minutes, or until the cheese is melted and bubbly.</li>
-                                                <li>Serve with sour cream and guacamole on the side.</li>
-                                            </ol>
-                                        </p>
+                        </section>
+
+                        <hr class="transparent-hr-2">
+
+                        <!--* 3. MINI CAPRESE SKEWERS-->
+                        <section id="Mini-caprese-skewers" class="recipes">
+                            <div class="recipe-grid-container">
+                                <div class="recipe-grid-item">
+                                    <div class="recipe-info">
+                                        <div class="grid-contents">
+                                            <h2><b>3.</b> Mini Caprese Skewers</h2>
+                                            
+                                            <p>
+                                                Enjoy the classic flavors of Caprese salad in bite-sized form with cherry tomatoes, mini mozzarella balls, and fresh basil leaves, drizzled with balsamic glaze for a tangy finish.
+                                            </p>
+                                            
+                                            <button class="save-button"><a href="#">Save</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipe-grid-item">
+                                    <img class="images" src="../../../Resources/Images/pesto-tomato-bites.png" alt="Mini Saprese Skewers" style="margin-top: 0px;">
+                                </div>
+
+                                <div class="recipe-grid-item">
+                                    <div class="ingredients">
+                                        <div class="grid-contents">
+                                            <h3>Ingredients:</h3>
+                                            <p>
+                                                <ul>
+                                                    <li>470g Cherry tomatoes</li>
+                                                    <li>470g Mini mozzarella balls (bocconcini)</li>
+                                                    <li>Fresh basil leaves</li>
+                                                    <li>Balsamic glaze</li>
+                                                    <li>Toothpicks or small skewers</li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipe-grid-item">
+                                    <div class="method">
+                                        <div class="grid-contents">
+                                            <h3>Method:</h3>
+                                            <p>
+                                                <ol>
+                                                    <li>Thread one cherry tomato, one mozzarella ball, and one basil leaf onto each toothpick or skewer.</li>
+                                                    <li>Arrange the skewers on a serving platter.</li>
+                                                    <li>Drizzle balsamic glaze over the skewers.</li>
+                                                    <li>Serve chilled or at room temperature.</li>
+                                                </ol>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
 
-                    <hr class="transparent-hr-2">
+                        <hr class="transparent-hr-2">
 
-                    <!--* 2. STUFFED MUSHROOMS -->
-                    <section id="Stuffed-mushrooms" class="recipes">
-                        <div class="recipe-grid-container">
-                            <div class="recipe-grid-item">
-                                <div class="recipe-info">
-                                    <div class="grid-contents">
-                                        <h2><b>2.</b> Stuffed Mushrooms</h2>
-                                                
-                                        <p>
-                                            Indulge in these elegant stuffed mushrooms filled with a creamy mixture of cream cheese, garlic, parsley, and Parmesan cheese, baked to perfection until golden brown and irresistibly delicious.
-                                        </p>
-                                        
-                                        <button class="save-button"><a href="#">Save</a></button>
+                        <!--* 4. SPINACH AND FETA PUFF PASTRY PINWHEELS -->
+                        <section id="Spinach-and-feta-puff-pastry-pinwheels" class="recipes">
+                            <div class="recipe-grid-container">
+                                <div class="recipe-grid-item">
+                                    <div class="recipe-info">
+                                        <div class="grid-contents">
+                                            <h2><b>4.</b> Spinach and Feta Puff Pastry Pinwheels</h2>
+                                                            
+                                            <p>
+                                                Delight in these savory puff pastry pinwheels filled with tender spinach, tangy feta cheese, and aromatic garlic, baked until golden brown and flaky.
+                                            </p>
+                                            
+                                            <button class="save-button"><a href="#">Save</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipe-grid-item">
+                                    <img class="images" src="../../../Resources/Images/Spinach and Feta Puff Pastry Pinwheels.png" alt="" style="margin-top: 0px;">
+                                </div>
+
+                                <div class="recipe-grid-item">
+                                    <div class="ingredients">
+                                        <div class="grid-contents">
+                                            <h3>Ingredients:</h3>
+                                            <p>
+                                                <ul>
+                                                    <li>1 sheet puff pastry, thawed</li>
+                                                    <li>1 cup frozen chopped spinach, thawed and drained/li>
+                                                    <li>1/2 cup crumbled feta cheese</li>
+                                                    <li>2 cloves garlic, minced</li>
+                                                    <li>Salt and pepper to taste</li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipe-grid-item">
+                                    <div class="method">
+                                        <div class="grid-contents">
+                                            <h3>Method:</h3>
+                                            <p>
+                                                <ol>
+                                                    <li>Preheat oven to 400°F (200°C).</li>
+                                                    <li>Roll out puff pastry sheets into rectangles.</li>
+                                                    <li>Spread thawed spinach evenly over the pastry sheets.</li>
+                                                    <li>Sprinkle crumbled feta cheese and minced garlic on top of the spinach.</li>
+                                                    <li>Season with salt and pepper.</li>
+                                                    <li>Roll up the pastry tightly into a log.</li>
+                                                    <li>Slice the log into 1-inch thick pinwheels.</li>
+                                                    <li>Place the pinwheels on a baking sheet lined with parchment paper.</li>
+                                                    <li>Bake for 15-20 minutes, or until golden brown and puffed up.</li>
+                                                    <li>Serve warm.</li>
+                                                </ol>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="recipe-grid-item">
-                                <img class="images" src="../../../Resources/Images/stuffed-mushroom.png" style="margin-top: 0px;">
-                            </div>
+                        </section>
 
-                            <div class="recipe-grid-item">
-                                <div class="ingredients">
-                                    <div class="grid-contents">
-                                        <h3>Ingredients:</h3>
-                                        <p>
-                                            <ul>
-                                                <li>16 large mushrooms (cremini or button)</li>
-                                                <li>220g Cream cheese</li>
-                                                <li>2 cloves garlic, minced</li>
-                                                <li>2 tablespoons chopped fresh parsley</li>
-                                                <li>1/4 cup grated Parmesan cheese</li>
-                                                <li>Salt and pepper to taste</li>
-                                            </ul>
-                                        </p>
+                        <hr class="transparent-hr-2">
+
+                        <!--* 5. BUFFALO CAULIFOWER BITES -->
+                        <section id="Buffalo-cauliflower-bites" class="recipes">
+                            <div class="recipe-grid-container">
+                                <div class="recipe-grid-item">
+                                    <div class="recipe-info">
+                                        <div class="grid-contents">
+                                            <h2><b>5.</b> Buffalo Cauliflower Bites</h2>
+
+                                            <p>
+                                                Savor the bold flavors of buffalo sauce with these crispy cauliflower bites coated in a spicy buffalo sauce and served with your choice of ranch or blue cheese dressing for dipping.
+                                            </p>
+                                            
+                                            <button class="save-button"><a href="#">Save</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipe-grid-item">
+                                    <img class="images" src="../../../Resources/Images/roasted_buffalo_cauliflower_bites.png" alt="" style="margin-top: 0px;">
+                                </div>
+
+                                <div class="recipe-grid-item">
+                                    <div class="ingredients">
+                                        <div class="grid-contents">
+                                            <h3>Ingredients:</h3>
+                                            <p>
+                                                <ul>
+                                                    <li>1 head cauliflower, cut into florets</li>
+                                                    <li>1/2 cup all-purpose flour</li>
+                                                    <li>1 teaspoon garlic powder</li>
+                                                    <li>Salt and pepper to taste</li>
+                                                    <li>1/2 cup buffalo sauce</li>
+                                                    <li>2 tablespoons melted butter</li>
+                                                    <li>Ranch or blue cheese dressing for dipping</li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipe-grid-item">
+                                    <div class="method">
+                                        <div class="grid-contents">
+                                            <h3>Method:</h3>
+                                            <p>
+                                                <ol>
+                                                    <li>Preheat oven to 450°F (230°C).</li>
+                                                    <li>In a bowl, mix flour, garlic powder, salt, and pepper.</li>
+                                                    <li>Toss cauliflower florets in the flour mixture until evenly coated.</li>
+                                                    <li>Place cauliflower on a baking sheet lined with parchment paper.</li>
+                                                    <li>Bake for 15-20 minutes, or until cauliflower is golden brown and crispy.</li>
+                                                    <li>In a separate bowl, mix buffalo sauce and melted butter.</li>
+                                                    <li>Toss baked cauliflower in the buffalo sauce mixture until evenly coated.</li>
+                                                    <li>Serve hot with ranch or blue cheese dressing for dipping.</li>
+                                                </ol>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="recipe-grid-item">
-                                <div class="method">
-                                    <div class="grid-contents">
-                                        <h3>Method:</h3>
-                                        <p>
-                                            <ol>
-                                                <li>Preheat oven to 375°F (190°C).</li>
-                                                <li>Remove stems from mushrooms and set aside.</li>
-                                                <li>In a bowl, mix cream cheese, minced garlic, parsley, Parmesan cheese, salt, and pepper.</li>
-                                                <li>Fill each mushroom cap with the cream cheese mixture.</li>
-                                                <li>Place stuffed mushrooms on a baking sheet.</li>
-                                                <li>Bake for 15-20 minutes, or until mushrooms are tender and filling is golden brown.</li>
-                                                <li>Serve Hot.</li>
-                                            </ol>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <hr class="transparent-hr-2">
-
-                    <!--* 3. MINI CAPRESE SKEWERS-->
-                    <section id="Mini-caprese-skewers" class="recipes">
-                        <div class="recipe-grid-container">
-                            <div class="recipe-grid-item">
-                                <div class="recipe-info">
-                                    <div class="grid-contents">
-                                        <h2><b>3.</b> Mini Caprese Skewers</h2>
-                                        
-                                        <p>
-                                            Enjoy the classic flavors of Caprese salad in bite-sized form with cherry tomatoes, mini mozzarella balls, and fresh basil leaves, drizzled with balsamic glaze for a tangy finish.
-                                        </p>
-                                        
-                                        <button class="save-button"><a href="#">Save</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="recipe-grid-item">
-                                <img class="images" src="../../../Resources/Images/pesto-tomato-bites.png" alt="Mini Saprese Skewers" style="margin-top: 0px;">
-                            </div>
-
-                            <div class="recipe-grid-item">
-                                <div class="ingredients">
-                                    <div class="grid-contents">
-                                        <h3>Ingredients:</h3>
-                                        <p>
-                                            <ul>
-                                                <li>470g Cherry tomatoes</li>
-                                                <li>470g Mini mozzarella balls (bocconcini)</li>
-                                                <li>Fresh basil leaves</li>
-                                                <li>Balsamic glaze</li>
-                                                <li>Toothpicks or small skewers</li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="recipe-grid-item">
-                                <div class="method">
-                                    <div class="grid-contents">
-                                        <h3>Method:</h3>
-                                        <p>
-                                            <ol>
-                                                <li>Thread one cherry tomato, one mozzarella ball, and one basil leaf onto each toothpick or skewer.</li>
-                                                <li>Arrange the skewers on a serving platter.</li>
-                                                <li>Drizzle balsamic glaze over the skewers.</li>
-                                                <li>Serve chilled or at room temperature.</li>
-                                            </ol>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <hr class="transparent-hr-2">
-
-                    <!--* 4. SPINACH AND FETA PUFF PASTRY PINWHEELS -->
-                    <section id="Spinach-and-feta-puff-pastry-pinwheels" class="recipes">
-                        <div class="recipe-grid-container">
-                            <div class="recipe-grid-item">
-                                <div class="recipe-info">
-                                    <div class="grid-contents">
-                                        <h2><b>4.</b> Spinach and Feta Puff Pastry Pinwheels</h2>
-                                                        
-                                        <p>
-                                            Delight in these savory puff pastry pinwheels filled with tender spinach, tangy feta cheese, and aromatic garlic, baked until golden brown and flaky.
-                                        </p>
-                                        
-                                        <button class="save-button"><a href="#">Save</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="recipe-grid-item">
-                                <img class="images" src="../../../Resources/Images/Spinach and Feta Puff Pastry Pinwheels.png" alt="" style="margin-top: 0px;">
-                            </div>
-
-                            <div class="recipe-grid-item">
-                                <div class="ingredients">
-                                    <div class="grid-contents">
-                                        <h3>Ingredients:</h3>
-                                        <p>
-                                            <ul>
-                                                <li>1 sheet puff pastry, thawed</li>
-                                                <li>1 cup frozen chopped spinach, thawed and drained/li>
-                                                <li>1/2 cup crumbled feta cheese</li>
-                                                <li>2 cloves garlic, minced</li>
-                                                <li>Salt and pepper to taste</li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="recipe-grid-item">
-                                <div class="method">
-                                    <div class="grid-contents">
-                                        <h3>Method:</h3>
-                                        <p>
-                                            <ol>
-                                                <li>Preheat oven to 400°F (200°C).</li>
-                                                <li>Roll out puff pastry sheets into rectangles.</li>
-                                                <li>Spread thawed spinach evenly over the pastry sheets.</li>
-                                                <li>Sprinkle crumbled feta cheese and minced garlic on top of the spinach.</li>
-                                                <li>Season with salt and pepper.</li>
-                                                <li>Roll up the pastry tightly into a log.</li>
-                                                <li>Slice the log into 1-inch thick pinwheels.</li>
-                                                <li>Place the pinwheels on a baking sheet lined with parchment paper.</li>
-                                                <li>Bake for 15-20 minutes, or until golden brown and puffed up.</li>
-                                                <li>Serve warm.</li>
-                                            </ol>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <hr class="transparent-hr-2">
-
-                    <!--* 5. BUFFALO CAULIFOWER BITES -->
-                    <section id="Buffalo-cauliflower-bites" class="recipes">
-                        <div class="recipe-grid-container">
-                            <div class="recipe-grid-item">
-                                <div class="recipe-info">
-                                    <div class="grid-contents">
-                                        <h2><b>5.</b> Buffalo Cauliflower Bites</h2>
-
-                                        <p>
-                                            Savor the bold flavors of buffalo sauce with these crispy cauliflower bites coated in a spicy buffalo sauce and served with your choice of ranch or blue cheese dressing for dipping.
-                                        </p>
-                                        
-                                        <button class="save-button"><a href="#">Save</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="recipe-grid-item">
-                                <img class="images" src="../../../Resources/Images/roasted_buffalo_cauliflower_bites.png" alt="" style="margin-top: 0px;">
-                            </div>
-
-                            <div class="recipe-grid-item">
-                                <div class="ingredients">
-                                    <div class="grid-contents">
-                                        <h3>Ingredients:</h3>
-                                        <p>
-                                            <ul>
-                                                <li>1 head cauliflower, cut into florets</li>
-                                                <li>1/2 cup all-purpose flour</li>
-                                                <li>1 teaspoon garlic powder</li>
-                                                <li>Salt and pepper to taste</li>
-                                                <li>1/2 cup buffalo sauce</li>
-                                                <li>2 tablespoons melted butter</li>
-                                                <li>Ranch or blue cheese dressing for dipping</li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="recipe-grid-item">
-                                <div class="method">
-                                    <div class="grid-contents">
-                                        <h3>Method:</h3>
-                                        <p>
-                                            <ol>
-                                                <li>Preheat oven to 450°F (230°C).</li>
-                                                <li>In a bowl, mix flour, garlic powder, salt, and pepper.</li>
-                                                <li>Toss cauliflower florets in the flour mixture until evenly coated.</li>
-                                                <li>Place cauliflower on a baking sheet lined with parchment paper.</li>
-                                                <li>Bake for 15-20 minutes, or until cauliflower is golden brown and crispy.</li>
-                                                <li>In a separate bowl, mix buffalo sauce and melted butter.</li>
-                                                <li>Toss baked cauliflower in the buffalo sauce mixture until evenly coated.</li>
-                                                <li>Serve hot with ranch or blue cheese dressing for dipping.</li>
-                                            </ol>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </section>
                     </section>
 
                     <hr class="transparent-hr-2">
@@ -434,6 +451,29 @@
             </article>    
         </div>
 
+        <!-- Bottom Navigation Bar -->
+        <div class="bottom-nav">
+            <a href="#" class="bottom-nav-item" id="home">
+                <i class="fa fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="bottom-nav-item" id="search">
+                <i class="fa fa-search"></i>
+                <span>Search</span>
+            </a>
+            <a href="#" class="bottom-nav-item" id="library">
+                <i class="fa fa-book"></i>
+                <span>Library</span>
+            </a>
+            <a href="#" class="bottom-nav-item" id="profile">
+                <i class="fa fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <a href="#" class="bottom-nav-item" id="settings">
+                <i class="fa fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </div>
 
         <link href="../../../Resources/Footer/Footer.html" rel="import" />
 
