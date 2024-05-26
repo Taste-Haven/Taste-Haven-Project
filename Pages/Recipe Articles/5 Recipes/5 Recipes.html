@@ -18,20 +18,62 @@
 
     <!-- Body -->
     <body>
-        <div id="Nav-bar-container"> <!--* TOP BAR-------------------------------->
-            <header id="Top-bar">
+        <!--* Top Bar -->
+        <div class="top-bar-container">
 
-                <div class="logo-container">
-                    <div class="logo"><a href="#">taste haven</a></div>
+            
+            <div class="top-bar">
+                <div class="left-section">
+                    <div class="burger" id="burger-menu">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="logo-container">
+                        <div class="logo"><a href="#">taste haven</a></div>
+                    </div>
+                </div>
+
+                <div class="top-bar-search-container">
+                    <div>
+                        <span> <!--* SEARCH BUTTON -->
+
+                            <svg class="search-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+    
+                        </span>
+
+                        <div>
+                            <input class="top-bar-search-input" type="search" placeholder="Search"><br>
+                        </div>
+                    </div>
                 </div>
 
                 <nav class="nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Library</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">
+                            <span> <!--* Upload button -->
+                        
+                                <svg class="upload-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+        
+                            </span>
+                        </a></li>
+
+                        <li><a href="#">
+                            <span> <!--* Profile button -->
+                        
+                                <svg class="profile-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                </svg>
+        
+                            </span>
+                        </a></li>
 
                         <div class="mode-toggle">
                             <button id="Dark-mode-toggle" onclick="toggleMode()">
@@ -52,28 +94,75 @@
 
                             </button>
                         </div>
-                        
                     </ul>
-
                 </nav>
-
-                <div class="burger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-            </header>
+            </div>
         </div>
         
-        <div class="overlay"></div>
-
-        <!-- <div class="Bottom-bar-container">
-            <div class="Bottom-bar">
-                <div class="Home">
-                    
-                </div>
+        <!--* Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Navigation</h2>
             </div>
-        </div> -->
+            <ul class="sidebar-nav">
+                <li class="nav-item"><a href="#" id="home">Home</a></li>
+                <li class="nav-item"><a href="#" id="popular">Popular</a></li>
+                <li class="nav-item"><a href="#" id="all">All</a></li>
+            </ul>
+        </div>
+        
+        <!--* Bottom Navigation Bar -->
+        <div class="bottom-nav-container">
+            <div class="bottom-nav">
+                <a href="#" class="bottom-nav-item" id="home">
+                    <span> <!--* HOME BUTTON -->
+
+                        <svg class="home-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                        </svg>
+
+                    </span>
+                </a>
+                <a href="#" class="bottom-nav-item" id="Search">
+                    <span> <!--* SEARCH BUTTON -->
+
+                        <svg class="search-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+
+                    </span>
+                </a>
+                <a href="#" class="bottom-nav-item" id="Upload">
+                    <span> <!--* UPLOAD BUTTON -->
+                        
+                        <svg class="upload-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                        </svg>
+
+                    </span>
+                </a>
+                <a href="#" class="bottom-nav-item" id="Library">
+                    <span> <!--* LIBRARY BUTTON -->
+                        
+                        <svg class="library-buton" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/>
+                        </svg>
+
+                    </span>
+                </a>
+                <a href="#" class="bottom-nav-item" id="Profile">
+                    <span> <!--* PROFILE BUTTON -->
+                        
+                        <svg class="profile-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+
+                    </span>
+                </a>
+            </div>
+        </div>
 
         <div id="Article"> <!--* ARTICLE------------------------------------------>
             <article>
@@ -89,10 +178,11 @@
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                             </svg>
-                            <p>Published By <i>User 389239574</i></p>
+                            
+                            <div>
+                                <p>User 389239574</p>
+                            </div>
                         </div>
-
-                        <button class="save-collection-button"><a href="#">Save Collection</a></button>
                     </div>
 
                     <h1>
@@ -116,8 +206,40 @@
                             </p>
                         </div>
                     </section>
-                    
-                    <hr class="hr-1">
+
+                    <!--Post buttons (underneath introduction paragraphs)----------------------------->
+                    <div class="post-buttons-container-parent">
+                        <!--Star rating-->
+                        <div class="star-rating-container">
+                            <div data-productid="1" class="rating">
+                                <span data-rating="5">&#9733</span>
+                                <span data-rating="4">&#9733</span>
+                                <span data-rating="3">&#9733</span>
+                                <span data-rating="2">&#9733</span>
+                                <span data-rating="1">&#9733</span>
+                            </div>
+                        </div>
+
+                        <!--Save collection-->
+                        <div class="post-buttons-container">
+                            <a href="#">
+                                <svg class="post-button save-collection-button" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 16 14">
+                                    <path class="cls-1" d="M2.5,3c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h11c.28,0,.5.22.5.5s-.22.5-.5.5H2.5ZM4.5,1c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h7c.28,0,.5.22.5.5s-.22.5-.5.5h-7ZM0,12.5c0,.83.67,1.5,1.5,1.5h13c.83,0,1.5-.67,1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5H1.5c-.83,0-1.5.67-1.5,1.5v7ZM1.5,13c-.28,0-.5-.22-.5-.5v-7c0-.28.22-.5.5-.5h13c.28,0,.5.22.5.5v7c0,.28-.22.5-.5.5H1.5Z"/>
+                                    <path class="cls-1" d="M5.84,9.32c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h4.32c.28,0,.5.22.5.5s-.22.5-.5.5h-4.32Z"/>
+                                    <path class="cls-1" d="M7.5,6.66c0-.28.22-.5.5-.5s.5.22.5.5v4.32c0,.28-.22.5-.5.5s-.5-.22-.5-.5v-4.32Z"/>
+                            </svg></a>
+                        </div>
+                        
+                        <!--Share-->
+                        <div class="post-buttons-container">
+                            <a href="#">
+                                <svg class="post-button share-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                                    <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
 
                     <section id="Recipe-list">
                         <!--* 1. LOADED NACHOS -->
@@ -126,13 +248,19 @@
                                 <div class="recipe-grid-item">
                                     <div class="recipe-info">
                                         <div class="grid-contents">
-                                            <h2><b>1.</b> Loaded Nachos</h2>
+                                            <div class="recipe-info-header">
+                                                <h2><b>1.</b> Loaded Nachos</h2>
+                                                <button class="recipe-save-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 16 14">
+                                                    <path class="cls-1" d="M2.5,3c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h11c.28,0,.5.22.5.5s-.22.5-.5.5H2.5ZM4.5,1c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h7c.28,0,.5.22.5.5s-.22.5-.5.5h-7ZM0,12.5c0,.83.67,1.5,1.5,1.5h13c.83,0,1.5-.67,1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5H1.5c-.83,0-1.5.67-1.5,1.5v7ZM1.5,13c-.28,0-.5-.22-.5-.5v-7c0-.28.22-.5.5-.5h13c.28,0,.5.22.5.5v7c0,.28-.22.5-.5.5H1.5Z"/>
+                                                    <path class="cls-1" d="M5.84,9.32c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h4.32c.28,0,.5.22.5.5s-.22.5-.5.5h-4.32Z"/>
+                                                    <path class="cls-1" d="M7.5,6.66c0-.28.22-.5.5-.5s.5.22.5.5v4.32c0,.28-.22.5-.5.5s-.5-.22-.5-.5v-4.32Z"/>
+                                                </svg></a></button>
+                                            </div>
 
                                             <p>
                                                 Dive into a mountain of crispy tortilla chips topped with melted cheese, seasoned ground beef or shredded chicken, fresh tomatoes, jalapeños, and olives, all served with creamy guacamole and sour cream on the side.
                                             </p>
                                             
-                                            <button class="save-button"><a href="#">Save</a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -190,13 +318,18 @@
                                 <div class="recipe-grid-item">
                                     <div class="recipe-info">
                                         <div class="grid-contents">
-                                            <h2><b>2.</b> Stuffed Mushrooms</h2>
+                                            <div class="recipe-info-header">
+                                                <h2><b>2.</b> Stuffed Mushrooms</h2>
+                                                <button class="recipe-save-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 16 14">
+                                                    <path class="cls-1" d="M2.5,3c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h11c.28,0,.5.22.5.5s-.22.5-.5.5H2.5ZM4.5,1c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h7c.28,0,.5.22.5.5s-.22.5-.5.5h-7ZM0,12.5c0,.83.67,1.5,1.5,1.5h13c.83,0,1.5-.67,1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5H1.5c-.83,0-1.5.67-1.5,1.5v7ZM1.5,13c-.28,0-.5-.22-.5-.5v-7c0-.28.22-.5.5-.5h13c.28,0,.5.22.5.5v7c0,.28-.22.5-.5.5H1.5Z"/>
+                                                    <path class="cls-1" d="M5.84,9.32c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h4.32c.28,0,.5.22.5.5s-.22.5-.5.5h-4.32Z"/>
+                                                    <path class="cls-1" d="M7.5,6.66c0-.28.22-.5.5-.5s.5.22.5.5v4.32c0,.28-.22.5-.5.5s-.5-.22-.5-.5v-4.32Z"/>
+                                                </svg></a></button>
+                                            </div>
                                                     
                                             <p>
                                                 Indulge in these elegant stuffed mushrooms filled with a creamy mixture of cream cheese, garlic, parsley, and Parmesan cheese, baked to perfection until golden brown and irresistibly delicious.
                                             </p>
-                                            
-                                            <button class="save-button"><a href="#">Save</a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -252,13 +385,18 @@
                                 <div class="recipe-grid-item">
                                     <div class="recipe-info">
                                         <div class="grid-contents">
-                                            <h2><b>3.</b> Mini Caprese Skewers</h2>
+                                            <div class="recipe-info-header">
+                                                <h2><b>3.</b> Mini Caprese Skewers</h2>
+                                                <button class="recipe-save-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 16 14">
+                                                    <path class="cls-1" d="M2.5,3c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h11c.28,0,.5.22.5.5s-.22.5-.5.5H2.5ZM4.5,1c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h7c.28,0,.5.22.5.5s-.22.5-.5.5h-7ZM0,12.5c0,.83.67,1.5,1.5,1.5h13c.83,0,1.5-.67,1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5H1.5c-.83,0-1.5.67-1.5,1.5v7ZM1.5,13c-.28,0-.5-.22-.5-.5v-7c0-.28.22-.5.5-.5h13c.28,0,.5.22.5.5v7c0,.28-.22.5-.5.5H1.5Z"/>
+                                                    <path class="cls-1" d="M5.84,9.32c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h4.32c.28,0,.5.22.5.5s-.22.5-.5.5h-4.32Z"/>
+                                                    <path class="cls-1" d="M7.5,6.66c0-.28.22-.5.5-.5s.5.22.5.5v4.32c0,.28-.22.5-.5.5s-.5-.22-.5-.5v-4.32Z"/>
+                                                </svg></a></button>
+                                            </div>
                                             
                                             <p>
                                                 Enjoy the classic flavors of Caprese salad in bite-sized form with cherry tomatoes, mini mozzarella balls, and fresh basil leaves, drizzled with balsamic glaze for a tangy finish.
                                             </p>
-                                            
-                                            <button class="save-button"><a href="#">Save</a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -310,13 +448,18 @@
                                 <div class="recipe-grid-item">
                                     <div class="recipe-info">
                                         <div class="grid-contents">
-                                            <h2><b>4.</b> Spinach and Feta Puff Pastry Pinwheels</h2>
+                                            <div class="recipe-info-header">
+                                                <h2><b>4.</b> Spinach and Feta Puff Pastry Pinwheels</h2>
+                                                <button class="recipe-save-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 16 14">
+                                                    <path class="cls-1" d="M2.5,3c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h11c.28,0,.5.22.5.5s-.22.5-.5.5H2.5ZM4.5,1c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h7c.28,0,.5.22.5.5s-.22.5-.5.5h-7ZM0,12.5c0,.83.67,1.5,1.5,1.5h13c.83,0,1.5-.67,1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5H1.5c-.83,0-1.5.67-1.5,1.5v7ZM1.5,13c-.28,0-.5-.22-.5-.5v-7c0-.28.22-.5.5-.5h13c.28,0,.5.22.5.5v7c0,.28-.22.5-.5.5H1.5Z"/>
+                                                    <path class="cls-1" d="M5.84,9.32c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h4.32c.28,0,.5.22.5.5s-.22.5-.5.5h-4.32Z"/>
+                                                    <path class="cls-1" d="M7.5,6.66c0-.28.22-.5.5-.5s.5.22.5.5v4.32c0,.28-.22.5-.5.5s-.5-.22-.5-.5v-4.32Z"/>
+                                                </svg></a></button>
+                                            </div>
                                                             
                                             <p>
                                                 Delight in these savory puff pastry pinwheels filled with tender spinach, tangy feta cheese, and aromatic garlic, baked until golden brown and flaky.
                                             </p>
-                                            
-                                            <button class="save-button"><a href="#">Save</a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -374,13 +517,18 @@
                                 <div class="recipe-grid-item">
                                     <div class="recipe-info">
                                         <div class="grid-contents">
-                                            <h2><b>5.</b> Buffalo Cauliflower Bites</h2>
+                                            <div class="recipe-info-header">
+                                                <h2><b>5.</b> Buffalo Cauliflower Bites</h2>
+                                                <button class="recipe-save-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 16 14">
+                                                    <path class="cls-1" d="M2.5,3c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h11c.28,0,.5.22.5.5s-.22.5-.5.5H2.5ZM4.5,1c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h7c.28,0,.5.22.5.5s-.22.5-.5.5h-7ZM0,12.5c0,.83.67,1.5,1.5,1.5h13c.83,0,1.5-.67,1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5H1.5c-.83,0-1.5.67-1.5,1.5v7ZM1.5,13c-.28,0-.5-.22-.5-.5v-7c0-.28.22-.5.5-.5h13c.28,0,.5.22.5.5v7c0,.28-.22.5-.5.5H1.5Z"/>
+                                                    <path class="cls-1" d="M5.84,9.32c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h4.32c.28,0,.5.22.5.5s-.22.5-.5.5h-4.32Z"/>
+                                                    <path class="cls-1" d="M7.5,6.66c0-.28.22-.5.5-.5s.5.22.5.5v4.32c0,.28-.22.5-.5.5s-.5-.22-.5-.5v-4.32Z"/>
+                                                </svg></a></button>
+                                            </div>
 
                                             <p>
                                                 Savor the bold flavors of buffalo sauce with these crispy cauliflower bites coated in a spicy buffalo sauce and served with your choice of ranch or blue cheese dressing for dipping.
                                             </p>
-                                            
-                                            <button class="save-button"><a href="#">Save</a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -435,14 +583,17 @@
 
                     <section id="Conclusion"> <!-- Conclusion -->
                         <div class="conclusion-container">
-                            <p style="margin-top: 0px; margin-bottom: 0px;">
-                                With these five delectable snack recipes in your culinary arsenal, you're ready to host the ultimate gathering for your friends. Whether you're craving cheesy indulgence, elegant appetizers, or spicy bites, there's something for everyone in this lineup. So gather your friends, fire up the oven, and get ready to impress with these irresistible snacks that will keep everyone coming back for more. Here's to good food, great company, and memorable moments shared with friends!
-                            </p>
+                            <div>
+                                <p style="margin-top: 0px; margin-bottom: 0px;">
+                                    With these five delectable snack recipes in your culinary arsenal, you're ready to host the ultimate gathering for your friends. Whether you're craving cheesy indulgence, elegant appetizers, or spicy bites, there's something for everyone in this lineup. So gather your friends, fire up the oven, and get ready to impress with these irresistible snacks that will keep everyone coming back for more. Here's to good food, great company, and memorable moments shared with friends!
+                                </p>
+                            </div>
                         </div>
                     </section>
                 </div>
 
                 <hr class="transparent-hr-2">
+
                 <div id="Improve-this-page">
                     <p>This site is open source.
                             <a href="https://github.com/Taste-Haven/tastehaven.github.io">Improve this page</a>
@@ -451,32 +602,12 @@
             </article>    
         </div>
 
-        <!-- Bottom Navigation Bar -->
-        <div class="bottom-nav">
-            <a href="#" class="bottom-nav-item" id="home">
-                <i class="fa fa-home"></i>
-                <span>Home</span>
-            </a>
-            <a href="#" class="bottom-nav-item" id="search">
-                <i class="fa fa-search"></i>
-                <span>Search</span>
-            </a>
-            <a href="#" class="bottom-nav-item" id="library">
-                <i class="fa fa-book"></i>
-                <span>Library</span>
-            </a>
-            <a href="#" class="bottom-nav-item" id="profile">
-                <i class="fa fa-user"></i>
-                <span>Profile</span>
-            </a>
-            <a href="#" class="bottom-nav-item" id="settings">
-                <i class="fa fa-cog"></i>
-                <span>Settings</span>
-            </a>
-        </div>
 
         <link href="../../../Resources/Footer/Footer.html" rel="import" />
 
         <script src="5 Recipes.js"></script>
+        <script src="../../../Resources/JavaScript/Top, side, bottom bar.js"></script>
+        <script src="../../../Resources/JavaScript/Dark Mode Function.js"></script>
+        <script src="../../../Resources/JavaScript/Star Rating Function.js"></script>
     </body>
 </html>
