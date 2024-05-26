@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3",
+    "firebase": "^10.11.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
