@@ -1,68 +1,65 @@
 @import url(../../../Resources/Variables.css);
 
 body {
-  background-color: var(--Light-Red);
+  background-color: var(--Light-Black);
   margin: auto 70px;
 }
 
-#Logo {
-  max-width: 200px;
-  margin: 4rem auto;
-  border-radius: 50%;
-}
-
-#header-and-details {
+.header-and-details {
   display: grid;
   grid-template-columns: repeat(1, 1);
 }
 
-#header-and-details form {
+.header {
+  font-family: "Freeman", "Noto sans", sans-serif;
+  font-size: 2rem;
+  color: var(--Color-2);
+}
+
+.log-in-form {
   display: flex;
   flex-direction: column;
-  margin: auto auto;
+  margin: auto;
   max-width: 55ch;
 }
 
-#email {
-  border-style: none;
-  background-color: var(--Black);
-  padding: 0.5rem;
-  border-radius: 5px;
-}
-
+#email,
 #password {
   border-style: none;
   background-color: var(--Black);
   padding: 0.5rem;
   border-radius: 5px;
-  color: var(--Light-Red);
+  margin-top: 30px;
 }
 
-#header-and-details form button {
-  background-color: var(--Black);
+.log-in-button {
+  background-color: var(--Color-2);
   border-style: none;
   color: var(--Light-Red);
-  font-size: 1.25rem;
-  font-family: "Tac One";
-  height: 2rem;
+  font-size: 1rem;
+  font-family: "Noto sans", sans-serif;
+  font-weight: bold;
+  padding: 0.25rem;
   border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
-#header-and-details div {
+.sign-up-link-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto auto;
 }
 
-#header-and-details div p {
+.sign-up-link-container p {
   margin: auto auto;
   margin-top: 2rem;
   font-family: sans-serif;
   font-weight: bold;
 }
 
-#header-and-details div p a {
+.sign-up-link-container p a {
   display: inline-block;
   text-decoration: none;
   background-color: var(--Black);
@@ -74,7 +71,6 @@ body {
   font-size: 0.9rem;
 }
 
-input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {

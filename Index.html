@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>Log in</title>
 
-        <link rel="stylesheet" href="Pages/Index/index.css">
+        <link rel="stylesheet" href="Pages/Index/index.css"/>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tac+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.typekit.net/flq2hcw.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap"rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
 
-        <!-- Firebase -->
-        <script>
+        <!--* Firebase -->
+            <script>
             // Import the functions you need from the SDKs you need
             import { initializeApp } from "firebase/app";
             import { getAnalytics } from "firebase/analytics";
@@ -28,32 +28,34 @@
                 storageBucket: "taste-haven7.appspot.com",
                 messagingSenderId: "249353155936",
                 appId: "1:249353155936:web:158a1fd72869fa25d39a05",
-                measurementId: "G-6GWEEVGC2J"
+                measurementId: "G-6GWEEVGC2J",
             };
 
             // Initialize Firebase
-            firebase.initializeApp(firebaseConfig); 
+            firebase.initializeApp(firebaseConfig);
             const analytics = getAnalytics(app);
         </script>
     </head>
 
-    <!-- Body -->
+  <!--* Body ----------------------------------------------------------------------------->
     <body>
+        <div class="header-and-details">
+            <div class="header-container">
+                <p class="header">taste haven</p>
+            </div>
 
-        <div id="header-and-details">
-            <img id="Logo" src="Resources/Images/Artboard 1.png" alt="Logo">
+            <form class="log-in-form">
+                <input class="form-input" type="email" id="email" name="email" placeholder="Email"/>
+                <input class="form-input" type="password" id="password" name="password" placeholder="Password"/>
+                <button class="log-in-button" type="submit">Log in</button>
+            </for>
 
-            <form id="login-form">
-                <input type="email" id="email" name="email" placeholder="Email"><br>
-                <input type="password" id="password" name="password" placeholder="Password"><br>
-                <button type="submit">Log in</button>
-            </form>
-
-            <div>
-                <p>Not already a user? <a href="Pages/Index/Sign up/Sign-up.html">Sign Up</a></p>
+            <div class="sign-up-link-container">
+                <p>Not already a user?<a href="Pages/Index/Sign up/Sign-up.html">Sign Up</a></p>
             </div>
         </div>
+    </body>
 
-        <script src="Pages/Index/index.js"></script>
-        <script src="../../Resources/JavaScript/Burger Menu + Dark Mode.js"></script>
+    <script src="Pages/Index/index.js"></script>
+    <script src="../../Resources/JavaScript/Burger Menu + Dark Mode.js"></script>
 </html>
