@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const burgerMenu = document.getElementById("sidebar-burger-button");
   const sidebar = document.getElementById("sidebar");
 
-  burgerMenu.addEventListener("click", function () {
+  function toggleSidebar() {
     if (sidebar.style.left === "0px") {
       sidebar.style.left = "-300px";
       burgerMenu.classList.remove("burger-hidden");
@@ -40,15 +40,43 @@ document.addEventListener("DOMContentLoaded", function () {
       sidebar.style.left = "0";
       burgerMenu.classList.add("burger-hidden");
     }
-  });
+  }
 
-  // Close the sidebar when clicking outside of it
-  document.addEventListener("click", function (event) {
+  burgerMenu.addEventListener("click", toggleSidebar);
+
+  function handleClickOutside(event) {
     if (!sidebar.contains(event.target) && !burgerMenu.contains(event.target)) {
-      sidebar.style.left = "-250px";
+      sidebar.style.left = "-300px";
       burgerMenu.classList.remove("burger-hidden");
     }
+  }
+
+  // Add or remove event listeners based on screen width
+  function updateEventListeners() {
+    if (window.innerWidth < 1700) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+  }
+
+  // Ensure sidebar visibility on resize
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 1700) {
+      sidebar.style.left = "0";
+    } else {
+      sidebar.style.left = "-300px";
+    }
+    updateEventListeners();
   });
+
+  // Initial setup
+  if (window.innerWidth >= 1700) {
+    sidebar.style.left = "0";
+  } else {
+    sidebar.style.left = "-300px";
+  }
+  updateEventListeners();
 });
 
 //* Bottom bar
