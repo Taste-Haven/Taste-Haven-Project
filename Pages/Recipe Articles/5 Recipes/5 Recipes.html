@@ -24,14 +24,13 @@
             
             <div class="top-bar">
                 <div class="left-section">
-                    <div class="burger" id="burger-menu">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
+                    <!-- Burger buttone for side bar -->
+                    <div class="sidebar-burger-button" id="sidebar-burger-button">
+                        <div class="line">☰</div>
                     </div>
 
                     <div class="logo-container">
-                        <div class="logo"><a href="#">taste haven</a></div>
+                        <div class="logo"><a href="../../Home/Home.html">taste haven</a></div>
                     </div>
                 </div>
 
@@ -46,7 +45,7 @@
                         </span>
 
                         <div>
-                            <input class="top-bar-search-input" type="search" placeholder="Search"><br>
+                            <input class="top-bar-search-input" type="search" placeholder="Search">
                         </div>
                     </div>
                 </div>
@@ -61,12 +60,10 @@
                                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
                                 </svg>
 
-                                <p>Upload</p>
-
                             </button>
                         </div>
 
-                        <div class="top-bar-profile-button"> <!--* Profile button -->
+                        <div id="openProfileMenuBtn" class="top-bar-profile-button"> <!--* Profile button -->
                             <button onclick="">
                         
                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16">
@@ -76,25 +73,38 @@
 
                             </button>
                         </div>
+                        
+                        <!--* Profile Menu ---------------------------------------------------->
+                        <div id="ProfileMenu" class="profile-menu">
+                            <div class="profile-menu-content">
+                                <div class="profile-menu-top">
+                                    
+                                </div>
+                                
+                                <div class="profile-menu-content-buttons dark-mode-toggle"> <!--* Dark mode button -->
+                                    <span id="Dark-mode-toggle">
+                                    
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                                            </svg>
+                                        </div>
+                                    
+                                        <div>Dark Mode</div>
+                                    </span>
+                                </div>
 
-                        <div class="mode-toggle"> <!--* Dark mode button -->
-                            <button id="Dark-mode-toggle" onclick="toggleMode()">
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
-                                </svg>
-                            
-                            </button>
-                        </div>
-
-                        <div class="settings-button"> <!--* Settings button -->
-                            <button onclick="">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                                </svg>
-
-                            </button>
+                                <div class="profile-menu-content-buttons settings-button"> <!--* Settings button -->
+                                    <span onclick="">
+        
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                        </svg>
+                                        
+                                        <div>Settings</div>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -102,15 +112,69 @@
         </div>
         
         <!--* Sidebar -->
-        <div class="side-bar">
-            <div class="side-bar-header">
-                <h2>Navigation</h2>
-            </div>
-            <ul class="side-bar-nav">
-                <li class="nav-item"><a href="#" id="home">Home</a></li>
-                <li class="nav-item"><a href="#" id="popular">Popular</a></li>
-                <li class="nav-item"><a href="#" id="all">All</a></li>
+        <div id="sidebar" class="side-bar">
+            <ul class="side-bar-content side-bar-top">
+                <div class="side-bar-top-home side-bar-nav-item"> <!-- Side bar Home -->
+                    <li><a href="../../Home/Home.html">
+                        <div>
+                            <span class="side-bar-nav-icon home-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                                </svg>
+                            </span>
+                            <div>Home</div>
+                        </div>
+                    </a></li>
+                </div>
+
+                <div class="side-bar-top-popular side-bar-nav-item"> <!-- Side bar Popular-->
+                    <li><a href="#" id="popular">
+                        <div>
+                            <span class="side-bar-nav-icon popular-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                                </svg>
+                            </span>
+                            <div>Popular</div>
+                        </div>
+                    </a></li>
+                </div>
+
+                <div class="side-bar-top-all side-bar-nav-item"> <!-- Side bar All-->
+                    <li><a href="#" id="all">
+                        <div>
+                            <span class="side-bar-nav-icon all-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                </svg>
+                            </span>
+                            <div>All</div>
+                        </div>
+                    </a></li>
+                </div>
+                <div class="side-bar-break"></div>
             </ul>
+
+            <div class="side-bar-content side-bar-footer">
+                <div></div>
+                <diV></diV>
+                <div class="side-bar-license"><a href="#">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-medical" viewBox="0 0 16 16">
+                        <path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                    </svg>
+
+                    <p>License</p>
+
+                </a></div>
+
+                <div class="side-bar-copyright">
+                    <a href="#">© Copyright Reserved 2024 Taste Haven</a>
+                </div>
+            </div>
+
+
         </div>
         
         <!--* Bottom Navigation Bar -->
@@ -168,22 +232,22 @@
 
         <div id="Article"> <!--* ARTICLE------------------------------------------>
             <article>
-                
-
                 <header id="Article-header">
 
                     <hr class="transparent-hr-2">
 
                     <div id="Above-header-container">
                         <div id="User-published">
-                            <svg id="User-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                            </svg>
-                            
-                            <div>
-                                <p>User 389239574</p>
-                            </div>
+                            <a>
+                                <svg id="User-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                </svg>
+                                
+                                <div>
+                                    <p href="#">User 389239574</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
@@ -224,22 +288,23 @@
 
                         <!--Save collection-->
                         <div class="post-buttons-container">
-                            <a href="#">
+                            <button href="#">
                                 <svg class="post-button save-collection-button" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 16 14">
                                     <path class="cls-1" d="M2.5,3c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h11c.28,0,.5.22.5.5s-.22.5-.5.5H2.5ZM4.5,1c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h7c.28,0,.5.22.5.5s-.22.5-.5.5h-7ZM0,12.5c0,.83.67,1.5,1.5,1.5h13c.83,0,1.5-.67,1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5H1.5c-.83,0-1.5.67-1.5,1.5v7ZM1.5,13c-.28,0-.5-.22-.5-.5v-7c0-.28.22-.5.5-.5h13c.28,0,.5.22.5.5v7c0,.28-.22.5-.5.5H1.5Z"/>
                                     <path class="cls-1" d="M5.84,9.32c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h4.32c.28,0,.5.22.5.5s-.22.5-.5.5h-4.32Z"/>
                                     <path class="cls-1" d="M7.5,6.66c0-.28.22-.5.5-.5s.5.22.5.5v4.32c0,.28-.22.5-.5.5s-.5-.22-.5-.5v-4.32Z"/>
-                            </svg></a>
+                                </svg>
+                            </button>
                         </div>
                         
                         <!--Share-->
                         <div class="post-buttons-container">
-                            <a href="#">
+                            <button href="#">
                                 <svg class="post-button share-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                     <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
                                     <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
                                 </svg>
-                            </a>
+                            </button>
                         </div>
                     </div>
 

@@ -1,0 +1,30 @@
+/* -------------Variables------------- */
+:root {
+  --White: rgb(255, 255, 255);
+
+  /* Light Grey */
+  --Light-Grey-1: rgb(250, 250, 250);
+  --Light-Grey-2: rgb(230, 230, 230);
+  --Light-Grey-3: rgb(220, 220, 220);
+  --Light-Grey-4: rgb(200, 200, 200);
+
+  --Mid-Grey: rgb(130, 130, 130);
+
+  /* Dark Grey */
+  --Dark-Grey-1: rgb(60, 60, 60);
+  --Dark-Grey-2: rgb(50, 50, 50);
+  --Dark-Grey-3: rgb(40, 40, 40);
+
+  --Light-Black: rgb(30, 30, 30);
+
+  --Black: rgb(0, 0, 0);
+
+  /* Colors */
+  --Color-1: rgb(51, 88, 48);
+  --Color-2: rgb(79, 158, 72);
+  --Color-3: rgb(131, 212, 99);
+  --Color-4: rgb(190, 248, 166);
+
+  /* Shadow */
+  --Shadow: rgba(0, 0, 0, 0.2);
+}
