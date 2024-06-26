@@ -43,9 +43,12 @@ body {
 }
 
 .logo-container {
-  margin-left: 15px;
+  /* margin-left: 15px; */
   padding: 0px;
   height: max-content;
+  position: relative;
+  bottom: 1px;
+  left: 15px;
 }
 
 .logo a {
@@ -61,13 +64,13 @@ body {
   flex-grow: 1;
   align-items: center;
   position: relative;
-  left: 100px;
+  left: 185px;
   transform: translateX(-50%);
   background-color: var(--Light-Grey-3);
   padding: 5px 10px;
   border-radius: 100px;
   width: fit-content;
-  max-width: 200px;
+  max-width: 350px;
   height: 2rem;
 }
 
@@ -85,6 +88,7 @@ body {
 .top-bar-search-container div div {
   padding: 0px 5px;
   padding-right: 20px;
+  box-shadow: var(--Box-Shadow);
 }
 
 .top-bar-search-input {
@@ -129,17 +133,20 @@ body {
 /* Profile Menu -------------------------------- */
 .profile-menu {
   display: none;
-  position: fixed;
-  top: 130px;
-  left: 89%;
+  position: absolute;
+  top: 155px;
+  right: 100%;
+
+  height: min-content;
   width: 150px;
   transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: var(--Light-Grey-2);
-  box-shadow: 0 5px 15px var(--Shadow);
+  box-shadow: var(--Box-Shadow);
   border-radius: 20px;
   padding: 1rem;
   font-size: 0.85rem;
+  z-index: 1000;
 }
 
 .profile-menu-top {
@@ -172,20 +179,15 @@ body {
   background-color: transparent;
   color: var(--Light-Black);
 
-  padding: 0px;
   width: 100%;
   height: 30px;
 
-  padding: 5px 7px;
-  padding-bottom: 0.2em;
-  padding-right: 0.35em;
+  padding: 3px 7px;
 }
 
-.profile-menu-content-buttons span svg {
-  fill: var(--Mid-Grey);
-}
-
+.profile-menu-content-buttons span svg,
 .profile-menu-content-buttons div {
+  fill: var(--Mid-Grey);
   color: var(--Mid-Grey);
 }
 
@@ -213,12 +215,18 @@ body {
   color: var(--Black);
 } */
 
+.profile-menu.show {
+  right: 0%;
+}
+
 /** Sidebar ------------------------------------------------------------------------------*/
 /* Burger Menu styles */
 .sidebar-burger-button {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  position: relative;
+  bottom: 2px;
 }
 
 .sidebar-burger-button-hidden {
@@ -230,7 +238,7 @@ body {
   color: var(--Black);
 }
 
-/* Sidebar styles */
+/* Sidebar block -----------------------------------------*/
 .side-bar {
   display: flex;
   flex-direction: column;
@@ -243,13 +251,12 @@ body {
   top: 0;
   left: -250px;
   background-color: var(--Light-Grey-2);
-  /* padding-top: 65px; */
-  /* padding-bottom: 65px; */
-  padding: 65px 0;
-  box-shadow: 0 5px 15px var(--Shadow);
+
+  padding-top: 65px;
+
+  box-shadow: var(--Box-Shadow);
   transition: left 0.3s;
   z-index: 900;
-  color: var(--White);
 }
 
 .side-bar-content {
@@ -259,7 +266,7 @@ body {
   padding: 15px;
 }
 
-/* Side bar top section */
+/* Side bar top section ------------------*/
 .side-bar-top {
   text-align: center;
   list-style-type: none;
@@ -278,9 +285,9 @@ body {
   border-radius: 20px;
 }
 
+/* Side bar icons ---------*/
 .side-bar-nav-icon {
   display: block;
-  /* background-color: var(--Color-1); */
   margin: auto 0px;
 }
 
@@ -292,6 +299,7 @@ body {
   margin: 0;
 }
 
+/* Specific side bar icons */
 .home-icon svg {
   height: 22px;
   position: relative;
@@ -318,11 +326,9 @@ body {
 }
 
 .side-bar-nav-item li a:hover,
-.side-bar-nav-item li a.active {
-  color: var(--Black);
-}
-
+.side-bar-nav-item li a.active,
 .side-bar-nav-item li a:hover div span svg {
+  color: var(--Black);
   fill: var(--Dark-Grey-1);
 }
 
@@ -330,23 +336,45 @@ body {
   background-color: var(--Light-Grey-3);
 }
 
-/* Side bar footer */
-
-/* License */
-.side-bar-license {
-  height: max-content;
-  background-color: var(--Color-1);
+/* Side bar footer -------------------------------*/
+.side-bar-footer-icons {
+  height: 20px;
+  width: auto;
 }
 
-.side-bar-license a {
+.side-bar-footer-items {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.side-bar-footer-items a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+  color: var(--Mid-Grey);
+  height: 1.5rem;
+}
+
+/* Hover Properties */
+.side-bar-footer-items:hover a p,
+.side-bar-footer-items:hover a svg {
+  color: var(--Black);
+  fill: var(--Black);
+}
+
+.side-bar-footer-items:hover {
+  background-color: var(--Light-Grey-3);
 }
 
 /* Copyright */
+.side-bar-copyright {
+  /* background-color: var(--Color-1); */
+  padding: 8px;
+}
+
 .side-bar-copyright a {
   font-size: 0.75rem;
   text-decoration: none;
@@ -355,6 +383,13 @@ body {
 
 .side-bar-copyright a:hover {
   text-decoration: underline;
+}
+
+/* The side bar has a weird thing where the bottom padding doesn't work,
+so I'm using a hacky work around to make the footer section appear higher (For now) */
+.side-bar-padding-block {
+  background-color: var(--Black);
+  height: 10px;
 }
 
 /* Side bar break ------------------------------*/
@@ -456,7 +491,7 @@ body {
 
 #User-icon {
   height: 1.75rem;
-  fill: var(--Black);
+  fill: var(--Color-1);
 }
 
 #Article-header {
@@ -495,6 +530,7 @@ body {
   background-color: var(--Light-Grey-2);
   padding: 0.5rem;
   border-radius: 20px;
+  box-shadow: var(--Box-Shadow);
 }
 
 .recipe-grid-item {
@@ -563,14 +599,18 @@ body {
   aspect-ratio: 16.9;
 }
 
+.recipe-grid-contents h3 {
+  color: var(--Color-1);
+}
+
 .ingredients {
   color: var(--Black);
-  background-color: var(--Color-2);
+  background-color: var(--Light-Grey-4);
 }
 
 .method {
   color: rgb(0, 0, 0);
-  background-color: var(--Color-3);
+  background-color: var(--Light-Grey-4);
 }
 
 #Conclusion {
@@ -776,12 +816,6 @@ body {
 @media screen and (min-width: 1200px) {
   /** Medium Screen */
 
-  .sidebar {
-    width: 100%;
-    left: -100%;
-    /* left: 0; */
-  }
-
   #Article {
     max-width: 1000px;
   }
@@ -831,12 +865,14 @@ body {
 .dark-mode .top-bar-search-input,
 .dark-mode .profile-menu-content-buttons:hover div,
 .dark-mode .side-bar-nav-item li a:hover,
-.dark-mode .side-bar-nav-item li a.active {
+.dark-mode .side-bar-nav-item li a.active,
+.dark-mode .side-bar-footer-items:hover a p {
   color: var(--White);
 }
 
 .dark-mode .profile-menu-content-buttons:hover span svg,
-.dark-mode .side-bar-nav-item li a:hover div span svg {
+.dark-mode .side-bar-nav-item li a:hover div span svg,
+.dark-mode .side-bar-footer-items:hover a svg {
   fill: var(--White);
 }
 
@@ -863,7 +899,8 @@ body {
   background-color: var(--Dark-Grey-1);
 }
 
-.dark-mode .profile-menu-content-buttons:hover {
+.dark-mode .profile-menu-content-buttons:hover,
+.dark-mode .side-bar-footer-items:hover {
   background-color: var(--Dark-Grey-2);
 }
 
@@ -873,7 +910,8 @@ body {
 }
 
 .dark-mode .side-bar-nav-item li a:hover div,
-.dark-mode .side-bar-break {
+.dark-mode .side-bar-break,
+.dark-mode .side-bar-footer-items:hover {
   background-color: var(--Dark-Grey-1);
 }
 
@@ -882,7 +920,7 @@ body {
   fill: var(--Color-2);
 }
 
-/** Article */
+/** Article --------------------------------------*/
 .dark-mode .introduction-container,
 .dark-mode .conclusion-container,
 .dark-mode .recipe-info {
@@ -901,6 +939,16 @@ body {
 
 .dark-mode .recipe-grid-container {
   background-color: var(--Dark-Grey-1);
+}
+
+.dark-mode .ingredients,
+.dark-mode .method {
+  background-color: var(--Dark-Grey-2);
+  color: var(--White);
+}
+
+.dark-mode .recipe-grid-contents h3 {
+  color: var(--Color-3);
 }
 
 .dark-mode #Improve-this-page p a:hover {

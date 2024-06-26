@@ -26,5 +26,6 @@
   --Color-4: rgb(190, 248, 166);
 
   /* Shadow */
-  --Shadow: rgba(0, 0, 0, 0.2);
+  --Box-Shadow: 0 5px 15px var(--Shadow-Color);
+  --Shadow-Color: rgba(0, 0, 0, 0.2);
 }

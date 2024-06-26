@@ -1,22 +1,26 @@
 //* Top Bar
 // Profile pop up button
 document.addEventListener("DOMContentLoaded", (event) => {
-  const profileButton = document.getElementById("profileButton");
-  const profileMenu = document.getElementById("profileMenu");
+  const profileButton = document.getElementById("openProfileMenuBtn");
+  const profileMenu = document.getElementById("ProfileMenu");
 
-  // Hide the profile menu on page load
-  profileMenu.classList.add("hidden");
+  // Ensure the profile menu is off-screen initially
+  profileMenu.classList.remove("show");
 
   // Toggle the profile menu when the button is clicked
   profileButton.addEventListener("click", (event) => {
-    profileMenu.classList.toggle("hidden");
+    profileMenu.classList.toggle("show");
     event.stopPropagation(); // Prevent the click from propagating to the document
   });
 
   // Hide the profile menu when clicking outside of it
   document.addEventListener("click", (event) => {
-    if (!profileMenu.classList.contains("hidden")) {
-      profileMenu.classList.add("hidden");
+    if (
+      profileMenu.classList.contains("show") &&
+      !profileMenu.contains(event.target) &&
+      !profileButton.contains(event.target)
+    ) {
+      profileMenu.classList.remove("show");
     }
   });
 
