@@ -1,0 +1,447 @@
+@import url(../CSS\ Color\ Variables.css);
+
+/* *-------------Top Bar------------------------------------------------------------------- */
+.top-bar-container {
+  margin: 0;
+  font-family: "Noto sans";
+}
+
+.top-bar {
+  background-color: var(--Light-Grey-2);
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: max-content;
+  top: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  z-index: 999;
+  transition: all 0.3s ease;
+
+  border-style: none;
+  border-bottom-style: solid;
+  border-color: var(--Light-Grey-4);
+  border-width: 1px;
+}
+
+.left-section {
+  display: flex;
+}
+
+.logo-container {
+  /* margin-left: 15px; */
+  padding: 0px;
+  height: max-content;
+  position: relative;
+  bottom: 1px;
+  left: 15px;
+}
+
+.logo a {
+  text-decoration: none;
+  font-family: "Freeman", "Noto sans", sans-serif;
+  font-size: 2rem;
+  color: var(--Color-1);
+}
+
+/* Search Bar ------------------------------------------------- */
+.top-bar-search-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  position: relative;
+  left: 185px;
+  transform: translateX(-50%);
+  background-color: var(--Light-Grey-3);
+  padding: 5px 10px;
+  border-radius: 100px;
+  width: fit-content;
+  max-width: 350px;
+  height: 2rem;
+}
+
+.top-bar-search-container div {
+  display: flex;
+}
+
+.top-bar-search-container div span svg {
+  position: relative;
+  top: 1.75px;
+  padding: 0px 5px;
+  fill: var(--Dark-Grey-1);
+}
+
+.top-bar-search-container div div {
+  padding: 0px 5px;
+  padding-right: 20px;
+  box-shadow: var(--Box-Shadow);
+}
+
+.top-bar-search-input {
+  display: flex;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.top-bar-search-input::placeholder {
+  color: var(--Dark-Grey-1);
+}
+
+.top-bar-search-input:focus::placeholder {
+  color: transparent;
+}
+
+/* Top bar upload and profile buttons ----------------------- */
+.top-bar-right-buttons div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  /* background-color: var(--Black); */
+}
+
+/* Upload button, Profile button */
+.top-bar-upload-button button,
+.top-bar-profile-button button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.top-bar-upload-button button svg,
+.top-bar-profile-button button svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Profile Menu -------------------------------- */
+.profile-menu {
+  display: none;
+  position: absolute;
+  top: 155px;
+  right: 100%;
+
+  height: min-content;
+  width: 150px;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: var(--Light-Grey-2);
+  box-shadow: var(--Box-Shadow);
+  border-radius: 20px;
+  padding: 1rem;
+  font-size: 0.85rem;
+  z-index: 1000;
+}
+
+.profile-menu-top {
+  /* background-color: var(--Color-1); */
+  display: flex;
+  width: 100%;
+}
+
+.profile-menu-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+/* Profile menu buttons */
+.profile-menu-content-buttons {
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profile-menu-content-buttons span {
+  color: var(--Color-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: var(--Light-Black);
+
+  width: 100%;
+  height: 30px;
+
+  padding: 3px 7px;
+}
+
+.profile-menu-content-buttons span svg,
+.profile-menu-content-buttons div {
+  fill: var(--Mid-Grey);
+  color: var(--Mid-Grey);
+}
+
+.profile-menu-content-buttons:hover {
+  background-color: var(--Light-Grey-3);
+}
+
+.profile-menu-content-buttons:hover span svg,
+.profile-menu-content-buttons:hover div {
+  fill: var(--Black);
+  color: var(--Black);
+}
+
+/* .close-profile-menu,
+  .close-side-bar {
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--Mid-Grey);
+  }
+  
+  .close-profile-menu:hover,
+  .close-side-bar:hover {
+    color: var(--Black);
+  } */
+
+.profile-menu.show {
+  right: 0%;
+}
+
+/** Sidebar ------------------------------------------------------------------------------*/
+/* Burger Menu styles */
+.sidebar-burger-button {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  bottom: 2px;
+}
+
+.sidebar-burger-button-hidden {
+  display: none;
+}
+
+.sidebar-burger-button .line {
+  font-size: 2rem;
+  color: var(--Black);
+}
+
+/* Sidebar block -----------------------------------------*/
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 250px;
+
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: var(--Light-Grey-2);
+
+  padding-top: 65px;
+
+  box-shadow: var(--Box-Shadow);
+  transition: left 0.3s;
+  z-index: 900;
+}
+
+.side-bar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+/* Side bar top section ------------------*/
+.side-bar-top {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-bar-nav-item li a div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  height: max-content;
+  margin: 5px 10px;
+  padding-left: 10px;
+
+  border-radius: 20px;
+}
+
+/* Side bar icons ---------*/
+.side-bar-nav-icon {
+  display: block;
+  margin: auto 0px;
+}
+
+.side-bar-nav-icon svg {
+  fill: var(--Mid-Grey);
+  height: 20px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+/* Specific side bar icons */
+.home-icon svg {
+  height: 22px;
+  position: relative;
+  left: 1px;
+}
+
+.popular-icon svg {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.all-icon svg {
+  height: 25px;
+  position: relative;
+  top: 3px;
+}
+
+/* Side bar navigation text */
+.side-bar-nav-item li a {
+  color: var(--Mid-Grey);
+  text-decoration: none;
+  display: block;
+}
+
+.side-bar-nav-item li a:hover,
+.side-bar-nav-item li a.active,
+.side-bar-nav-item li a:hover div span svg {
+  color: var(--Black);
+  fill: var(--Dark-Grey-1);
+}
+
+.side-bar-nav-item li a:hover div {
+  background-color: var(--Light-Grey-3);
+}
+
+/* Side bar footer -------------------------------*/
+.side-bar-footer-icons {
+  height: 20px;
+  width: auto;
+}
+
+.side-bar-footer-items {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.side-bar-footer-items a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: var(--Mid-Grey);
+  height: 1.5rem;
+}
+
+/* Hover Properties */
+.side-bar-footer-items:hover a p,
+.side-bar-footer-items:hover a svg {
+  color: var(--Black);
+  fill: var(--Black);
+}
+
+.side-bar-footer-items:hover {
+  background-color: var(--Light-Grey-3);
+}
+
+/* Copyright */
+.side-bar-copyright {
+  /* background-color: var(--Color-1); */
+  padding: 8px;
+}
+
+.side-bar-copyright a {
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: var(--Mid-Grey);
+}
+
+.side-bar-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* The side bar has a weird thing where the bottom padding doesn't work,
+  so I'm using a hacky work around to make the footer section appear higher (For now) */
+.side-bar-padding-block {
+  background-color: var(--Black);
+  height: 10px;
+}
+
+/* Side bar break ------------------------------*/
+.side-bar-break {
+  display: block;
+  background-color: var(--Light-Grey-4);
+  height: 2px;
+  width: 200px;
+  margin: 20px auto;
+}
+
+/** Bottom nav bar -----------------------------------------------------------------------*/
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--Light-Grey-2);
+  z-index: 999;
+}
+
+.bottom-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.bottom-nav-item svg {
+  color: var(--Black);
+  transition: color 0.1s ease;
+}
+
+.bottom-nav-item:hover svg {
+  color: var(--Color-1);
+}
+
+.bottom-nav-item.active svg {
+  color: var(--Color-2);
+}
+
+.bottom-nav-item span svg {
+  width: 22px;
+  height: 22px;
+}
+
+.bottom-nav-home span svg {
+  width: 24px;
+  height: 24px;
+}
+
+.bottom-nav-library span svg {
+  position: relative;
+  top: 2px;
+  width: 23px;
+  height: 23px;
+}
+
+.nav ul li a:hover,
+.mode-toggle button:hover,
+.dark-mode .mode-toggle button:hover,
+.settings-button button:hover,
+.dark-mode .settings-button button:hover {
+  transition: color 0.5s;
+}
